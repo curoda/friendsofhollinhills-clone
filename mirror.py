@@ -20,16 +20,19 @@ ASSETS = os.path.join(SITE, "assets")
 PAGE_HOST = "www.friendsofhollinhills.org"
 
 # Hosts whose assets we download and serve locally.
-CDN_HOSTS = {"cdn11.editmysite.com", "cdn2.editmysite.com", "cdn.editmysite.com",
-             "www.weebly.com", "editmysite.com"}
+CDN_HOSTS = {"cdn11.editmysite.com", "cdn2.editmysite.com", "cdn.editmysite.com"}
 # Hosts to KEEP live (never download/rewrite).
 KEEP_HOSTS = {"www.powr.io", "powr.io", "widget.docsbot.ai", "ssl.google-analytics.com",
               "www.google-analytics.com", "www.googletagmanager.com", "www.gstatic.com",
               "www.google.com", "fonts.googleapis.com", "fonts.gstatic.com",
               "www.youtube.com", "youtube.com", "youtu.be", "www.facebook.com",
               "facebook.com", "www.instagram.com", "instagram.com", "www.hollinhills.org",
-              "hollinhills.org", "maps.google.com", "www.paypal.com", "paypalobjects.com",
-              "www.paypalobjects.com", "static.weebly.com"}
+              "hollinhills.org", "maps.google.com", "maps.googleapis.com", "www.paypal.com",
+              "paypalobjects.com", "www.paypalobjects.com", "static.weebly.com",
+              # Weebly DYNAMIC endpoints (map generator, comment form) + static helpers:
+              # keep external so the live Google-map iframe (generateMap.php -> editmysite.com)
+              # and the blog comment form render exactly like the origin.
+              "www.weebly.com", "weebly.com", "www.editmysite.com"}
 
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
@@ -270,19 +273,25 @@ SLIDE_CFG_RE = re.compile(r'wSlideshow\.render\((\{.*?\})\)', re.DOTALL)
 SLIDE_IMG_RE = re.compile(r'"url"\s*:\s*"([^"]+)"')
 
 def queue_slideshow_images(html):
-    """Parse wSlideshow.render configs and queue the /uploads/<path>_orig.<ext> binaries the
-    client JS will request, so they exist on the clone even though we emptied the container."""
+    """Parse wSlideshow.render configs and queue BOTH the base and the _orig variants of each
+    image the client JS will request (full slide uses the base name, the nav thumbnail uses
+    <name>_orig.<ext>), so they all exist on the clone even though the container is empty."""
     n = 0
     for cfg in SLIDE_CFG_RE.findall(html):
         for url in SLIDE_IMG_RE.findall(cfg):
             u = url.lstrip("/")
             if u.startswith("uploads/"):
                 u = u[len("uploads/"):]
+            variants = [u]
             m = re.match(r'^(.*)\.([^.]+)$', u)
-            orig = f"{m.group(1)}_orig.{m.group(2)}" if m else (u + "_orig")
-            absu = f"https://{PAGE_HOST}/uploads/{orig}"
-            asset_local_ref(absu, PAGE_HOST, f"/uploads/{orig}")
-            n += 1
+            if m:
+                variants.append(f"{m.group(1)}_orig.{m.group(2)}")
+            else:
+                variants.append(u + "_orig")
+            for v in variants:
+                absu = f"https://{PAGE_HOST}/uploads/{v}"
+                asset_local_ref(absu, PAGE_HOST, f"/uploads/{v}")
+                n += 1
     return n
 
 def cf_decode_html(html):
