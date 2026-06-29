@@ -1,0 +1,50 @@
+INTERNAL	#	
+INTERNAL	/	
+INTERNAL	/parks.html	Parks
+INTERNAL	/historicplaques.html	Historic Plaques
+INTERNAL	/news.html	News
+INTERNAL	https://www.friendsofhollinhills.org/store/p36/Support_Friends_of_Hollin_Hills%21.html	Donate
+INTERNAL	/store.html	Store
+INTERNAL	/contact.html	Contact
+INTERNAL	#	more...
+INTERNAL	#	Cart (0)
+INTERNAL	/about-fohh.html	About FOHH
+INTERNAL	/grants.html	Grants
+INTERNAL	/events-calendar.html	Events Calendar
+INTERNAL	/drinks-with-friends.html	Drinks with Friends
+INTERNAL	/bocce-with-friends.html	Bocce with Friends
+INTERNAL	/turkey-trot.html	Turkey Trot
+INTERNAL	/giving-tuesday.html	Giving Tuesday
+INTERNAL	/living-modern.html	Goodman Symposium
+INTERNAL	/over-the-years.html	Over the Years
+INTERNAL	https://www.friendsofhollinhills.org/store/p36/Support_Friends_of_Hollin_Hills%21.html	Donate
+INTERNAL	/store.html	Store
+INTERNAL	/contact.html	Contact
+INTERNAL	/store/c3/Events.html	Events
+INTERNAL	//cdn2.editmysite.com/images/util/blank-product-w640.png	
+EXTERNAL	https://facebook.com/sharer.php?u=http%3A%2F%2Fwww.friendsofhollinhills.org%2Fstore%2Fp2%2FEducational_Event%253A_Efficient_Modernism.html	Facebook
+EXTERNAL	https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.friendsofhollinhills.org%2Fstore%2Fp2%2FEducational_Event%253A_Efficient_Modernism.html&text=Educational+Event%3A+Efficient+Modernism	Twitter
+EXTERNAL	https://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.friendsofhollinhills.org%2Fstore%2Fp2%2FEducational_Event%253A_Efficient_Modernism.html&description=Are+you+trying+to+adapt+your+mid+century+modern+home+to+modern+energy+efficiency%3F+Wondering+what+your+options+are+for+insulating+a+flat+or+cathedral+ceiling%3F+Should+you+replace+your+single+pane+windows+with+double+or+triple+pane+windows%3F+And+why+are+these+houses+so+cold+in+the+winter+anyway%3F+Join+the+Friends+of+Hollin+Hills+for+a+complimentary+fun+and+informative+evening+of+wine%2C+cheese+and+a+panel+of+experts+to+answer+these+questions+and+more.++++%0AThere+will+be+a+social+hour+with+wine+and+cheese+from+4%3A00+pm+to+5%3A00+pm%2C+with+the+panel%2FQ%26amp%3BA+beginning+at+5%3A00+pm.++++%0AFriends+of+Hollin+Hills+is+sponsoring+the+first+in+a+series+of+educational+events+designed+to+address+practical+concerns+that+the+new+and+longtime+Hollin+Hills+homeowners+may+have+about+living+in+their+midcentury+home.++++%0ARSVP+to+friendsofhollinhills%40gmail.com&media=	Pinterest
+EXTERNAL	https://plus.google.com/share?url=http%3A%2F%2Fwww.friendsofhollinhills.org%2Fstore%2Fp2%2FEducational_Event%253A_Efficient_Modernism.html	Google+
+EXTERNAL	mailto:friendsofhollinhills@friendsofhollinhills.org	
+EXTERNAL	https://www.instagram.com/friendsofhollinhills/	
+EXTERNAL	https://www.facebook.com/friendsofhollinhills/photos	
+EXTERNAL	https://www.youtube.com/@friendsofhollinhills6007/featured	
+INTERNAL	/store/p30/Friends_of_Hollin_Hills_Donation.html	
+INTERNAL	#	
+INTERNAL	/about-fohh.html	About FOHH
+INTERNAL	/grants.html	Grants
+INTERNAL	/events-calendar.html	Events Calendar
+INTERNAL	/drinks-with-friends.html	Drinks with Friends
+INTERNAL	/bocce-with-friends.html	Bocce with Friends
+INTERNAL	/turkey-trot.html	Turkey Trot
+INTERNAL	/giving-tuesday.html	Giving Tuesday
+INTERNAL	/living-modern.html	Goodman Symposium
+INTERNAL	/over-the-years.html	Over the Years
+INTERNAL	/parks.html	Parks
+INTERNAL	/historicplaques.html	Historic Plaques
+INTERNAL	/news.html	News
+INTERNAL	https://www.friendsofhollinhills.org/store/p36/Support_Friends_of_Hollin_Hills%21.html	Donate
+INTERNAL	/store.html	Store
+INTERNAL	/contact.html	Contact
+INTERNAL	https://www.friendsofhollinhills.org/store/checkout?cart=	Checkout

@@ -1,0 +1,49 @@
+INTERNAL	#	
+INTERNAL	/	
+INTERNAL	/parks.html	Parks
+INTERNAL	/historicplaques.html	Historic Plaques
+INTERNAL	/news.html	News
+INTERNAL	https://www.friendsofhollinhills.org/store/p36/Support_Friends_of_Hollin_Hills%21.html	Donate
+INTERNAL	/store.html	Store
+INTERNAL	/contact.html	Contact
+INTERNAL	#	more...
+INTERNAL	#	Cart (0)
+INTERNAL	/about-fohh.html	About FOHH
+INTERNAL	/grants.html	Grants
+INTERNAL	/events-calendar.html	Events Calendar
+INTERNAL	/drinks-with-friends.html	Drinks with Friends
+INTERNAL	/bocce-with-friends.html	Bocce with Friends
+INTERNAL	/turkey-trot.html	Turkey Trot
+INTERNAL	/giving-tuesday.html	Giving Tuesday
+INTERNAL	/living-modern.html	Goodman Symposium
+INTERNAL	/over-the-years.html	Over the Years
+INTERNAL	https://www.friendsofhollinhills.org/store/p36/Support_Friends_of_Hollin_Hills%21.html	Donate
+INTERNAL	/store.html	Store
+INTERNAL	/contact.html	Contact
+INTERNAL	/uploads/1/2/1/8/121874536/s743144713563146189_p31_i1_w1280.jpeg	
+EXTERNAL	https://facebook.com/sharer.php?u=http%3A%2F%2Fwww.friendsofhollinhills.org%2Fstore%2Fp31%2FNature%25E2%2580%2599s_Best_Hope%253A_Tallamy_offers_advice_on_how_we_can_restore_biodiversity.html	Facebook
+EXTERNAL	https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.friendsofhollinhills.org%2Fstore%2Fp31%2FNature%25E2%2580%2599s_Best_Hope%253A_Tallamy_offers_advice_on_how_we_can_restore_biodiversity.html&text=Nature%E2%80%99s+Best+Hope%3A+Tallamy+offers+advice+on+how+we+can+restore+biodiversity	Twitter
+EXTERNAL	https://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.friendsofhollinhills.org%2Fstore%2Fp31%2FNature%25E2%2580%2599s_Best_Hope%253A_Tallamy_offers_advice_on_how_we_can_restore_biodiversity.html&description=Doug+Tallamy%C2%A0addresses+the+need+for+all+of+us+to+participate+in+restoring+our+natural+world.%C2%A0Global+insect+declines+and+3%2C000%2C000%2C000+fewer+birds+in+North+American+are+a+bleak+reality+check+about+how+ineffective+our+current+landscape+designs+have+been+at+sustaining+the+plants+and+animals+that+sustain%C2%A0us.%C2%A0+To+create+landscapes+that+enhance+local+ecosystems+rather+than+degrade+them%2C+we+must+1%29+remove+invasives+and+2%29+add+native+plant+communities+that+sustain+food+webs%2C+sequester+carbon%2C+maintain+diverse+native+been+communities+and+manage+our+watersheds.+%E2%80%8BIf+we+do+this+in+half+the+area+now+in+lawn%2C+we+can+create+Homegrown+National+Park%2C+a+network+of+viable+habitats+throughout+the+US+that+will+provide+vital+corridors+connecting+the+natural+areas+that+remain.+This+approach+to+conservation+empowers+everyone+to+play+a+significant+role+in+the+future+of+the+natural+world.+It+is+also+enormously+satisfying+and+restorative+for+those+who+act.+Sunday%2C+February+263+pm%C2%A0-+Author+signing+%26amp%3B+Wine+Reception4+pm+-+Tallamy%E2%80%99s+Chat%C2%A0+Mt+Vernon+Unitarian+Church%2C%C2%A0Main+Building1909+Windmill+LaneAlexandria%2C+VA+22307&media=http%3A%2F%2Fwww.friendsofhollinhills.org%2Fuploads%2F1%2F2%2F1%2F8%2F121874536%2Fs743144713563146189_p31_i1_w1280.jpeg%3Fwidth%3D320	Pinterest
+EXTERNAL	https://plus.google.com/share?url=http%3A%2F%2Fwww.friendsofhollinhills.org%2Fstore%2Fp31%2FNature%25E2%2580%2599s_Best_Hope%253A_Tallamy_offers_advice_on_how_we_can_restore_biodiversity.html	Google+
+EXTERNAL	mailto:friendsofhollinhills@friendsofhollinhills.org	
+EXTERNAL	https://www.instagram.com/friendsofhollinhills/	
+EXTERNAL	https://www.facebook.com/friendsofhollinhills/photos	
+EXTERNAL	https://www.youtube.com/@friendsofhollinhills6007/featured	
+INTERNAL	/store/p30/Friends_of_Hollin_Hills_Donation.html	
+INTERNAL	#	
+INTERNAL	/about-fohh.html	About FOHH
+INTERNAL	/grants.html	Grants
+INTERNAL	/events-calendar.html	Events Calendar
+INTERNAL	/drinks-with-friends.html	Drinks with Friends
+INTERNAL	/bocce-with-friends.html	Bocce with Friends
+INTERNAL	/turkey-trot.html	Turkey Trot
+INTERNAL	/giving-tuesday.html	Giving Tuesday
+INTERNAL	/living-modern.html	Goodman Symposium
+INTERNAL	/over-the-years.html	Over the Years
+INTERNAL	/parks.html	Parks
+INTERNAL	/historicplaques.html	Historic Plaques
+INTERNAL	/news.html	News
+INTERNAL	https://www.friendsofhollinhills.org/store/p36/Support_Friends_of_Hollin_Hills%21.html	Donate
+INTERNAL	/store.html	Store
+INTERNAL	/contact.html	Contact
+INTERNAL	https://www.friendsofhollinhills.org/store/checkout?cart=	Checkout

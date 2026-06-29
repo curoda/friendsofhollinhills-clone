@@ -1,0 +1,16 @@
+FONT CSS URLS:
+https://cdn2.editmysite.com/fonts/Josefin_Sans/font.css?2
+https://cdn2.editmysite.com/fonts/Karla/font.css?2
+https://cdn2.editmysite.com/fonts/Open_Sans/font.css?2
+https://cdn2.editmysite.com/fonts/Work_Sans/font.css?2
+
+COMPUTED FONT-FAMILIES:
+"Times New Roman"
+"Helvetica Neue", Helvetica, Arial, sans-serif
+"Open Sans"
+"Josefin Sans", sans-serif
+Courier
+"Work Sans"
+Karla
+Arial
+ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"

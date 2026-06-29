@@ -1,0 +1,51 @@
+INTERNAL	#	
+INTERNAL	/	
+INTERNAL	/parks.html	Parks
+INTERNAL	/historicplaques.html	Historic Plaques
+INTERNAL	/news.html	News
+INTERNAL	https://www.friendsofhollinhills.org/store/p36/Support_Friends_of_Hollin_Hills%21.html	Donate
+INTERNAL	/store.html	Store
+INTERNAL	/contact.html	Contact
+INTERNAL	#	more...
+INTERNAL	#	Cart (0)
+INTERNAL	/about-fohh.html	About FOHH
+INTERNAL	/grants.html	Grants
+INTERNAL	/events-calendar.html	Events Calendar
+INTERNAL	/drinks-with-friends.html	Drinks with Friends
+INTERNAL	/bocce-with-friends.html	Bocce with Friends
+INTERNAL	/turkey-trot.html	Turkey Trot
+INTERNAL	/giving-tuesday.html	Giving Tuesday
+INTERNAL	/living-modern.html	Goodman Symposium
+INTERNAL	/over-the-years.html	Over the Years
+INTERNAL	https://www.friendsofhollinhills.org/store/p36/Support_Friends_of_Hollin_Hills%21.html	Donate
+INTERNAL	/store.html	Store
+INTERNAL	/contact.html	Contact
+INTERNAL	/uploads/1/2/1/8/121874536/s743144713563146189_p40_i10_w797.png	
+INTERNAL	/uploads/1/2/1/8/121874536/s743144713563146189_p40_i10_w797.png	
+INTERNAL	/uploads/1/2/1/8/121874536/s743144713563146189_p40_i11_w722.png	
+EXTERNAL	https://facebook.com/sharer.php?u=http%3A%2F%2Fwww.friendsofhollinhills.org%2Fstore%2Fp40%2Fplaque.html	Facebook
+EXTERNAL	https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.friendsofhollinhills.org%2Fstore%2Fp40%2Fplaque.html&text=Hollin+Hills+Historic+Plaque	Twitter
+EXTERNAL	https://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.friendsofhollinhills.org%2Fstore%2Fp40%2Fplaque.html&description=CELEBRATE+YOUR+HOME.+CELEBRATE+HOLLIN+HILLS.Order+a+Hollin+Hills+Historic+Plaque+and+proudly+display+your+home%E2%80%99s+place+in+our+nationally+recognized+neighborhood.+Crafted+for+beauty+and+durability%2C+each+plaque+highlights+the+architectural+legacy+that+makes+Hollin+Hills+so+special.+Your+purchase+includes+a+%24100%2B+tax+deductible+donation+and+directly+supports+Friends+of+Hollin+Hills+parks%2C+shared+spaces%2C+and+community+programs.+You+are+not+just+purchasing+a+plaque.+You+are+honoring+your+home%E2%80%99s+story+and+reinvesting+in+the+community+you+love.++ABOUT+THE+DESIGNEach+plaque+has+been+thoughtfully+designed+by+Hollin+Hills+architects+and+designers+to+reflect+the+neighborhood%E2%80%99s+mid-century+modern+heritage.+Crafted+in+durable+stainless+steel%2C+the+design+honors+the+clean+lines+and+architectural+integrity+that+define+our+community.+The+plaque+design+has+been+reviewed+and+approved+by+the+Design+Review+Committee+%28DRC%29+and+the+Civic+Association+of+Hollin+Hills+%28CAHH%29%2C+ensuring+it+aligns+with+our+shared+preservation+standards+and+neighborhood+character.++COSTChoose+a+standard+neighborhood+plaque+or+customize+yours+with+your+address+and+build+date+for+a+more+personal+historic+marker.+Hollin+Hills+Historic+Plaque%3A+%24329Customized+Hollin+Hills+Historic+Plaque%3A+%24449++OTHER+LOGISTICS+++Proof+%26amp%3B+Approval%3A+After+you+place+your+order%2C+you+will+receive+a+print+proof+to+review+and+approve+before+production+begins.+You+can+feel+confident+knowing+your+plaque+will+look+exactly+the+way+you+want+it+to%2C+with+every+detail+just+right+for+your+home.+If+approval+is+not+provided+within+a+week%2C+FOHH+will+assume+you+have+no+changes+and+proceed+with+your+order.+Production+Timeline%3A+Plaques+are+ordered+during+designated+order+windows+throughout+the+year.+Once+the+window+closes%2C+FOHH+places+the+full+production+order.+All+plaques+arrive+together%2C+and+you+will+be+notified+as+soon+as+yours+is+ready.+Pickup+will+be+coordinated+at+a+FOHH+Committee+member%E2%80%99s+home+at+a+time+that+works+for+you.+Installation%3A+You+will+receive+clear+installation+instructions+so+you+can+easily+mount+your+plaque.+If+you+would+prefer+help%2C+we+can+recommend+two+trusted+neighborhood+handymen+you+can+hire.+Either+way%2C+you+will+soon+have+a+beautiful+historic+marker+proudly+displayed+on+your+home.+Tax+Deductible+Donation%3A+Your+purchase+includes+a+%24100%2B+tax+deductible+donation+to+Friends+of+Hollin+Hills.&media=http%3A%2F%2Fwww.friendsofhollinhills.org%2Fuploads%2F1%2F2%2F1%2F8%2F121874536%2Fs743144713563146189_p40_i10_w797.png%3Fwidth%3D320	Pinterest
+EXTERNAL	https://plus.google.com/share?url=http%3A%2F%2Fwww.friendsofhollinhills.org%2Fstore%2Fp40%2Fplaque.html	Google+
+EXTERNAL	mailto:friendsofhollinhills@friendsofhollinhills.org	
+EXTERNAL	https://www.instagram.com/friendsofhollinhills/	
+EXTERNAL	https://www.facebook.com/friendsofhollinhills/photos	
+EXTERNAL	https://www.youtube.com/@friendsofhollinhills6007/featured	
+INTERNAL	/store/p30/Friends_of_Hollin_Hills_Donation.html	
+INTERNAL	#	
+INTERNAL	/about-fohh.html	About FOHH
+INTERNAL	/grants.html	Grants
+INTERNAL	/events-calendar.html	Events Calendar
+INTERNAL	/drinks-with-friends.html	Drinks with Friends
+INTERNAL	/bocce-with-friends.html	Bocce with Friends
+INTERNAL	/turkey-trot.html	Turkey Trot
+INTERNAL	/giving-tuesday.html	Giving Tuesday
+INTERNAL	/living-modern.html	Goodman Symposium
+INTERNAL	/over-the-years.html	Over the Years
+INTERNAL	/parks.html	Parks
+INTERNAL	/historicplaques.html	Historic Plaques
+INTERNAL	/news.html	News
+INTERNAL	https://www.friendsofhollinhills.org/store/p36/Support_Friends_of_Hollin_Hills%21.html	Donate
+INTERNAL	/store.html	Store
+INTERNAL	/contact.html	Contact
+INTERNAL	https://www.friendsofhollinhills.org/store/checkout?cart=	Checkout

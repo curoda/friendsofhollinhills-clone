@@ -1,0 +1,10 @@
+title	Educational Event: Efficient Modernism
+origin-trial	A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==
+og:site_name	Friends of Hollin Hills
+og:title	Educational Event: Efficient Modernism
+og:description	Friends of Hollin Hills was founded in 2017, as a 501(c)(3) charitable nonprofit organization to educate the public and protect the Hollin Hills Historic District, a unique mid-century modern neighborhood, as a national resource.
+og:image	http://www.friendsofhollinhills.org/uploads/1/2/1/8/121874536/published/img-0048.jpg?1706559557
+og:url	http://www.friendsofhollinhills.org/store/p2/Educational_Event%3A_Efficient_Modernism.html
+description	Friends of Hollin Hills was founded in 2017, as a 501(c)(3) charitable nonprofit organization to educate the public and protect the Hollin Hills Historic District, a unique mid-century modern neighborhood, as a national resource.
+Content-Type	text/html; charset=utf-8
+viewport	width=device-width, initial-scale=1.0

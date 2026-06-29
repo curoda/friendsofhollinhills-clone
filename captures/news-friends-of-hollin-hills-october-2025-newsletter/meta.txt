@@ -1,0 +1,10 @@
+title	FRIENDS OF HOLLIN HILLS | OCTOBER 2025 Newsletter
+origin-trial	A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==
+og:site_name	Friends of Hollin Hills
+og:title	FRIENDS OF HOLLIN HILLS | OCTOBER 2025 Newsletter
+og:description	IENDS OF HOLLIN HILLS | OCTOBER 2025 Step Into Fall—and Across a New Bridge This fall, discover something new in the parks you already love. Set in motion by parks chair Dan Shulke and Funded by a...
+og:image	http://www.friendsofhollinhills.org/uploads/1/2/1/8/121874536/published/img-0048.jpg?1706559557
+og:url	http://www.friendsofhollinhills.org/2/post/2025/10/friends-of-hollin-hills-october-2025-newsletter.html
+cache-control	no-cache
+Content-Type	text/html; charset=utf-8
+viewport	width=device-width, initial-scale=1.0
