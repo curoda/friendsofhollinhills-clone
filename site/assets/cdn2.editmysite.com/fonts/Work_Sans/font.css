@@ -1,0 +1,44 @@
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 200;
+  src: url(/assets/cdn2.editmysite.com/fonts/Work_Sans/ultralight.eot); /* IE9 Compat Modes */
+  src: url(/assets/cdn2.editmysite.com/fonts/Work_Sans/ultralight.eot) format('embedded-opentype'), /* IE6-IE8 */
+       url(/assets/cdn2.editmysite.com/fonts/Work_Sans/ultralight.woff2) format('woff2'), /* Super Modern Browsers */
+       url(/assets/cdn2.editmysite.com/fonts/Work_Sans/ultralight.woff) format('woff'), /* Modern Browsers */
+       url(/assets/cdn2.editmysite.com/fonts/Work_Sans/ultralight.ttf) format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url(/assets/cdn2.editmysite.com/fonts/Work_Sans/light.eot); /* IE9 Compat Modes */
+  src: url(/assets/cdn2.editmysite.com/fonts/Work_Sans/light.eot) format('embedded-opentype'), /* IE6-IE8 */
+       url(/assets/cdn2.editmysite.com/fonts/Work_Sans/light.woff2) format('woff2'), /* Super Modern Browsers */
+       url(/assets/cdn2.editmysite.com/fonts/Work_Sans/light.woff) format('woff'), /* Modern Browsers */
+       url(/assets/cdn2.editmysite.com/fonts/Work_Sans/light.ttf) format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/cdn2.editmysite.com/fonts/Work_Sans/regular.eot); /* IE9 Compat Modes */
+  src: url(/assets/cdn2.editmysite.com/fonts/Work_Sans/regular.eot) format('embedded-opentype'), /* IE6-IE8 */
+       url(/assets/cdn2.editmysite.com/fonts/Work_Sans/regular.woff2) format('woff2'), /* Super Modern Browsers */
+       url(/assets/cdn2.editmysite.com/fonts/Work_Sans/regular.woff) format('woff'), /* Modern Browsers */
+       url(/assets/cdn2.editmysite.com/fonts/Work_Sans/regular.ttf) format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/assets/cdn2.editmysite.com/fonts/Work_Sans/bold.eot); /* IE9 Compat Modes */
+  src: url(/assets/cdn2.editmysite.com/fonts/Work_Sans/bold.eot) format('embedded-opentype'), /* IE6-IE8 */
+       url(/assets/cdn2.editmysite.com/fonts/Work_Sans/bold.woff2) format('woff2'), /* Super Modern Browsers */
+       url(/assets/cdn2.editmysite.com/fonts/Work_Sans/bold.woff) format('woff'), /* Modern Browsers */
+       url(/assets/cdn2.editmysite.com/fonts/Work_Sans/bold.ttf) format('truetype'); /* Safari, Android, iOS */
+}
