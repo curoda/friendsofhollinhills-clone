@@ -116,13 +116,13 @@
 				var forceMapDrag = false;
 				var useGestures = false;
 
-				var myLatLng = new google.maps.LatLng(0, 0);
+				var myLatLng = new google.maps.LatLng(38.760489, -77.060732);
 				var locations = null;
 				var mapOptions = {
 					scrollwheel: false,
 					center: myLatLng,
-					zoom: 0,
-					panControl: false, zoomControl: false,
+					zoom: 15,
+					panControl: false, zoomControl: true, zoomControlOptions: { style: google.maps.ZoomControlStyle.SMALL },
 					scaleControl: false,
 					mapTypeControl: false,
 					streetViewControl: false,
@@ -136,7 +136,7 @@
 					mapOptions.zoomControlOptions = {
 						style: google.maps.ZoomControlStyle.SMALL
 					};
-					mapOptions.zoomControl = false;
+					mapOptions.zoomControl = true;
 				}
 
 				if (useGestures) {
@@ -152,7 +152,7 @@
 					var map = new google.maps.Map(document.getElementById("map"), options);
 					var activeMarker;
 					var hoverMarkerIndex;
-					var hasMapPoint = false;
+					var hasMapPoint = true;
 					var hasInfoWindow = true;
 					var activeMarkerId = null;
 
@@ -343,7 +343,7 @@
 								var postData = {
 									lat: center.lat(),
 									lng: center.lng(),
-									message: 'marker_position_update_'
+									message: 'marker_position_update_663278079539846442'
 								}
 								window.parent.postMessage(JSON.stringify(postData), url);
 							}, SET_TIMEOUT_MS + 25);
@@ -355,7 +355,7 @@
 						var url = (window.location != window.parent.location) ?
 							document.referrer :
 							document.location.href;
-						window.parent.postMessage('map_click_event_', url);
+						window.parent.postMessage('map_click_event_663278079539846442', url);
 					});
 
 					window.addEventListener('message', ({
@@ -407,8 +407,8 @@
 				if (mapZoomScale > 0) {
 					var maxZoomService = new google.maps.MaxZoomService();
 					maxZoomService.getMaxZoomAtLatLng({
-						lat: parseFloat(0),
-						lng: parseFloat(0),
+						lat: parseFloat(38.760489),
+						lng: parseFloat(-77.060732),
 					}, function(response) {
 						const success = response.status === 'OK';
 						var maxZoomLevel = success ? response.zoom : 18;
@@ -430,7 +430,7 @@
 	<body onload="gLoad();" style="margin: 0; padding: 0;">
 
 		<div id="mapContainer">
-			<div id="map" style="height: 250px; max-width: 100%; margin: 0 auto;"></div>
+			<div id="map" style="height: 250px; max-width: 100%; "></div>
 		</div>
 
 	</body>

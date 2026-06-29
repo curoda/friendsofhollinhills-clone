@@ -53,14 +53,18 @@ def safe_segment(seg):
     return re.sub(r'[<>:"\\|?*]', "_", seg)
 
 def local_path_for(host, path):
-    """Return absolute filesystem path under ASSETS for a given host+path (no query)."""
+    """Return absolute filesystem path for a given host+path (no query).
+    friendsofhollinhills.org assets keep their ORIGINAL root path under SITE/ (so root-relative
+    refs like /uploads/.. and the slideshow JS's /uploads/..X_orig.ext both resolve); CDN-host
+    assets go under SITE/assets/<host>/<path>."""
     path = path.split("?")[0].split("#")[0]
     if not path or path == "/":
         path = "/index"
     parts = [safe_segment(p) for p in path.split("/") if p != ""]
     if not parts:
         parts = ["index"]
-    # if ends without extension and not clearly a file, keep as-is
+    if host in (PAGE_HOST, "friendsofhollinhills.org"):
+        return os.path.join(SITE, *parts)
     return os.path.join(ASSETS, host, *parts)
 
 def normalize_url(u, base):
@@ -224,7 +228,120 @@ SRCSET_RE = re.compile(r'(\ssrcset\s*=\s*)(["\'])(.*?)\2', re.IGNORECASE)
 STYLE_ATTR_RE = re.compile(r'(\sstyle\s*=\s*)(["\'])(.*?)\2', re.IGNORECASE | re.DOTALL)
 INLINE_STYLE_TAG_RE = re.compile(r'(<style[^>]*>)(.*?)(</style>)', re.IGNORECASE | re.DOTALL)
 
+SLIDESHOW_OPEN_RE = re.compile(r'<div id="(\d+)-slideshow"[^>]*>', re.IGNORECASE)
+
+def empty_slideshow_containers(html):
+    """Empty Weebly slideshow containers (<div id="N-slideshow" class="wslide">...</div>) that
+    the captured DOM froze mid-animation. wSlideshow.render() rebuilds them fresh on load so the
+    slideshow rotates (and uses /uploads/..X_orig paths, which we now serve at root)."""
+    out = []
+    pos = 0
+    count = 0
+    for m in SLIDESHOW_OPEN_RE.finditer(html):
+        start = m.start()
+        if start < pos:
+            continue
+        open_end = m.end()
+        # find matching </div> by scanning nested <div>/</div> from open_end
+        depth = 1
+        i = open_end
+        tag_re = re.compile(r'<(/?)div\b', re.IGNORECASE)
+        while depth > 0:
+            tm = tag_re.search(html, i)
+            if not tm:
+                i = len(html); break
+            if tm.group(1) == '/':
+                depth -= 1
+            else:
+                depth += 1
+            i = tm.end()
+        # i now points just after the matching </div>'s "</div"; find the '>'
+        close_gt = html.find('>', i)
+        close_gt = close_gt + 1 if close_gt != -1 else len(html)
+        out.append(html[pos:open_end])   # keep opening <div ...>
+        out.append('</div>')             # emptied content + close
+        pos = close_gt
+        count += 1
+    out.append(html[pos:])
+    return ''.join(out), count
+
+
+SLIDE_CFG_RE = re.compile(r'wSlideshow\.render\((\{.*?\})\)', re.DOTALL)
+SLIDE_IMG_RE = re.compile(r'"url"\s*:\s*"([^"]+)"')
+
+def queue_slideshow_images(html):
+    """Parse wSlideshow.render configs and queue the /uploads/<path>_orig.<ext> binaries the
+    client JS will request, so they exist on the clone even though we emptied the container."""
+    n = 0
+    for cfg in SLIDE_CFG_RE.findall(html):
+        for url in SLIDE_IMG_RE.findall(cfg):
+            u = url.lstrip("/")
+            if u.startswith("uploads/"):
+                u = u[len("uploads/"):]
+            m = re.match(r'^(.*)\.([^.]+)$', u)
+            orig = f"{m.group(1)}_orig.{m.group(2)}" if m else (u + "_orig")
+            absu = f"https://{PAGE_HOST}/uploads/{orig}"
+            asset_local_ref(absu, PAGE_HOST, f"/uploads/{orig}")
+            n += 1
+    return n
+
+def cf_decode_html(html):
+    """Decode Cloudflare email-obfuscation in the raw server HTML (rendered DOM had it decoded,
+    but we mirror raw HTML). Replaces /cdn-cgi/l/email-protection#HEX hrefs with mailto: and
+    __cf_email__ spans / data-cfemail with the plaintext email."""
+    def dec(h):
+        try:
+            r = int(h[:2], 16)
+            return ''.join(chr(int(h[i:i+2], 16) ^ r) for i in range(2, len(h), 2))
+        except Exception:
+            return ''
+    # 1) hrefs
+    def repl_href(m):
+        email = dec(m.group(1))
+        return f'href="mailto:{email}"' if email else m.group(0)
+    html = re.sub(r'href="/cdn-cgi/l/email-protection#([0-9a-fA-F]+)"', repl_href, html)
+    html = re.sub(r"href='/cdn-cgi/l/email-protection#([0-9a-fA-F]+)'", repl_href, html)
+    # 1b) anchors that carry the email in data-cfemail (bare href, visible "[email protected]")
+    def repl_anchor(m):
+        email = dec(m.group(1))
+        return f'<a href="mailto:{email}">{email}</a>' if email else m.group(0)
+    html = re.sub(r'<a\b[^>]*\bdata-cfemail="([0-9a-fA-F]+)"[^>]*>.*?</a>', repl_anchor, html, flags=re.DOTALL)
+    # 2) visible __cf_email__ spans
+    def repl_span(m):
+        email = dec(m.group(1))
+        return email if email else '[email protected]'
+    html = re.sub(r'<span class="__cf_email__"[^>]*data-cfemail="([0-9a-fA-F]+)"[^>]*>.*?</span>',
+                  repl_span, html, flags=re.DOTALL)
+    # 3) any leftover data-cfemail attributes -> decode into text node fallback / strip attr
+    html = re.sub(r'\sdata-cfemail="[0-9a-fA-F]+"', '', html)
+    # 4) drop the now-unneeded cloudflare email-decode script (path 404s on static host)
+    html = re.sub(r'<script[^>]*email-decode\.min\.js[^>]*></script>', '', html, flags=re.IGNORECASE)
+    return html
+
 def rewrite_html(html, base):
+    # Remove POWr's runtime-injected helper div that gets frozen into <head> in the captured
+    # DOM. When re-parsed as static markup a <div> inside <head> is foster-parented to the top
+    # of <body> (its &shy; text renders an ~18px line) and shifts the whole page down. powr.js
+    # recreates whatever it needs at runtime, so dropping the stale snapshot is faithful.
+    queue_slideshow_images(html)
+    html = cf_decode_html(html)
+    html = re.sub(r'<div id="powrIframeLoader">.*?</div>', '', html, flags=re.DOTALL)
+    # Reset Weebly slideshow containers so the client JS re-renders & rotates them.
+    html, _ssn = empty_slideshow_containers(html)
+    # Belt-and-suspenders: even if the live powr.js re-creates #powrIframeLoader at runtime,
+    # ensure it can never contribute layout height (origin renders it at height 0). The visible
+    # social-icons widget is a separate .powr-social-media-icons element and is unaffected.
+    override = '<style id="clone-fixes">#powrIframeLoader{display:none!important;height:0!important;line-height:0!important;}</style>'
+    if '</head>' in html:
+        html = html.replace('</head>', override + '</head>', 1)
+    # The Weebly commerce JS can't reach its cart backend on a static host and renders "Cart (-)".
+    # Force the accurate empty state "Cart (0)" (the store is non-functional/Manual-handling anyway).
+    cartfix = ("<script id=\"clone-cartfix\">(function(){function f(){var a=document.getElementById('wsite-nav-cart-a');"
+               "if(a&&!/\\(0\\)/.test(a.textContent)){a.textContent='Cart (0)';}}var n=0,iv=setInterval(function(){f();"
+               "if(++n>30)clearInterval(iv);},400);if(document.readyState!=='loading')f();"
+               "else document.addEventListener('DOMContentLoaded',f);})();</script>")
+    if '</body>' in html:
+        html = html.replace('</body>', cartfix + '</body>', 1)
     def repl_attr(m):
         pre, q, val = m.group(1), m.group(2), m.group(3)
         new = rewrite_url_in_html(val, base)
@@ -290,9 +407,9 @@ def main():
     rows = [l.split("\t") for l in open(os.path.join(ROOT, "url_slug_map.tsv")).read().strip().split("\n")]
     pages = []
     for url, slug in rows:
-        cap = os.path.join(ROOT, "captures", slug, "page.html")
+        cap = os.path.join(ROOT, "raw", slug + ".html")
         if not os.path.exists(cap):
-            print("MISSING capture:", slug)
+            print("MISSING raw html:", slug)
             continue
         html = open(cap, encoding="utf-8", errors="replace").read()
         new = rewrite_html(html, url)
