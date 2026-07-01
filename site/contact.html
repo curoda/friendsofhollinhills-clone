@@ -525,7 +525,7 @@ _W.setup_model_rpc({"rpc_namespace":"_W.Commerce.RPC","model_namespace":"_W.Comm
 <div><div class="wsite-form-field" style="margin:5px 0px 5px 0px;">
 				<label class="wsite-form-label" for="input-469162832435199874">Email <span class="form-required">*</span></label>
 				<div class="wsite-form-input-container">
-					<input aria-required="true" id="input-469162832435199874" class="wsite-form-input wsite-input wsite-input-width-370px" type="text" name="email" />
+					<input aria-required="true" id="input-469162832435199874" class="wsite-form-input wsite-input wsite-input-width-370px" type="text" name="_u469162832435199874" />
 				</div>
 				<div id="instructions-469162832435199874" class="wsite-form-instructions" style="display:none;"></div>
 			</div></div>
@@ -543,9 +543,6 @@ _W.setup_model_rpc({"rpc_namespace":"_W.Commerce.RPC","model_namespace":"_W.Comm
 		<div style="display:none; visibility:hidden;">
 			<input type="hidden" name="wsite_subject" />
 		</div>
-		<div aria-hidden="true" style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;">
-			<label>Please leave this field empty <input type="text" name="_hp" tabindex="-1" autocomplete="off" value="" /></label>
-		</div>
 		<div style="text-align:left; margin-top:10px; margin-bottom:0px;">
 			<input type="hidden" name="form_version" value="2" />
 			<input type="hidden" name="wsite_approved" id="wsite-approved" value="approved" />
@@ -556,48 +553,33 @@ _W.setup_model_rpc({"rpc_namespace":"_W.Commerce.RPC","model_namespace":"_W.Comm
 				<span class="wsite-button-inner">Submit</span>
 			</a>
 		</div>
-			<div class="fohh-form-status" role="status" aria-live="polite" style="margin-top:10px;"></div>
 	</form>
 	<script>
-function fohhContactMail(form){
-	try {
-		var fields = {};
-		var hp = '';
-		var els = form.querySelectorAll('input, textarea, select');
-		for (var i = 0; i < els.length; i++){
-			var f = els[i];
+	function fohhContactMail(form){
+		var lines = [];
+		var fields = form.querySelectorAll('input, textarea, select');
+		for (var i = 0; i < fields.length; i++){
+			var f = fields[i];
 			var t = (f.type || '').toLowerCase();
-			if (t === 'submit' || t === 'button' || t === 'reset' || t === 'image' || t === 'file') continue;
+			if (t === 'hidden' || t === 'submit' || t === 'button' || t === 'reset' || t === 'file' || t === 'image') continue;
 			if (!f.name) continue;
-			if (f.name === '_hp'){ hp = f.value || ''; continue; }
-			if ((t === 'checkbox' || t === 'radio') && !f.checked) continue;
-			fields[f.name] = f.value || '';
-		}
-		var statusEl = form.querySelector('.fohh-form-status');
-		if (statusEl){ statusEl.style.color = ''; statusEl.textContent = 'Sending...'; }
-		fetch('https://clone-launcher.vercel.app/api/relay/mail', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({
-				requestId: '71186c59-6711-45b8-b5c5-af9cb0c4addb',
-				kind: 'contact',
-				fields: fields,
-				_hp: hp
-			})
-		}).then(function(r){
-			if (r.ok){
-				if (statusEl){ statusEl.style.color = '#2e7d32'; statusEl.textContent = 'Thanks, we got your message.'; }
-				if (form.reset) form.reset();
-			} else {
-				if (statusEl){ statusEl.style.color = '#c62828'; statusEl.textContent = 'Sorry, something went wrong. Please try again later.'; }
+			var container = f.closest ? f.closest('.wsite-form-field') : null;
+			var labelText = '';
+			if (container){
+				var lbl = container.querySelector('.wsite-form-label');
+				if (lbl) labelText = lbl.textContent.replace(/\*/g, '').trim();
 			}
-		}).catch(function(){
-			if (statusEl){ statusEl.style.color = '#c62828'; statusEl.textContent = 'Sorry, something went wrong. Please try again later.'; }
-		});
-	} catch (e) {}
-	return false;
-}
-</script>
+			var subEl = f.parentNode ? f.parentNode.querySelector('.wsite-form-sublabel') : null;
+			var sub = subEl ? subEl.textContent.trim() : '';
+			var fieldName = labelText + (sub ? ' (' + sub + ')' : '');
+			if (!fieldName) fieldName = f.name;
+			lines.push(fieldName + ': ' + (f.value || ''));
+		}
+		var body = lines.join('\r\n');
+		window.location.href = 'mailto:friendsofhollinhills@friendsofhollinhills.org?subject=' + encodeURIComponent('Website Inquiry') + '&body=' + encodeURIComponent(body);
+		return false;
+	}
+	</script>
 	<div id="g-recaptcha-343753596863354827" class="recaptcha" data-size="invisible" data-recaptcha="0" data-sitekey="6Ldf5h8UAAAAAJFJhN6x2OfZqBvANPQcnPa8eb1C"></div>
 
 
